@@ -1,0 +1,53 @@
+/*.allitemimages {*/
+  /*height: 22em;*/
+  /*width: 100%;*/
+/*}*/
+
+.allitemimages img
+{
+  height:9em;
+  width: auto;
+  margin: auto;
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .allitemimages img
+  {
+    height:11em;
+  }
+}
+
+.card .account-icon {
+  font-size: 5em;
+  float: left;
+  padding: 10px;
+  padding-right: 15px;
+}
+
+.user-info .btn {
+  margin-left: 0;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  z-index: 10;
+  top: 30%;
+  opacity: 0.5;
+  color: #2E2E2E;
+}
+
+
+#imgCarousel i {
+  font-size: 4em;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+

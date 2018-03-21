@@ -1,0 +1,146 @@
+#card_image {
+  height: auto;
+  width: auto;
+  max-height: 10em;
+  margin: auto;
+  display: block;
+}
+
+.search-jumbotron input[type=text]:focus {
+  color: #dddddd;
+}
+
+.search-jumbotron input[type=text] {
+  color: #dddddd;
+}
+
+.card-image {
+  height: 10em;
+  width: 100%;
+}
+#inputMap
+{
+  overflow:visible;
+}
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+  .card-image {
+    height: 4em;
+    width: 100%;
+  }
+  #inputMap
+  {
+    height: 200px;
+  }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .card-image {
+    height: 8em;
+    width: 100%;
+  }
+  #inputMap
+  {
+    height: 300px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .card-image {
+    height: 10em;
+  }
+  #inputMap
+  {
+    height: 400px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .card-image {
+    height: 12em;
+    width: 100%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .card-image {
+    height: 14em;
+    width: 100%;
+  }
+}
+.search-jumbotron {
+  height: 20em;
+  background: url("../img/bg-img-compressed.jpg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+main {
+  padding-top: 20px;
+}
+
+.carousel-indicators {
+  bottom: -50px;
+}
+
+.carousel-indicators .active {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  background-color: #212121;
+  border: none;
+  border-radius: 40%;
+}
+
+.carousel-indicators li {
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: #2E2E2E;
+}
+.carousel-inner {
+  margin-bottom: 50px;
+}
+
+.modal{
+  z-index: 20;
+}
+.modal-backdrop{
+  z-index: 10;
+}​
+
+#ItemCarousel .card .card-block {
+  padding-top: 3px;
+  padding-bottom: 1px;
+}
+
+.item-card .card-title{
+  padding-left: 0.5em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .item-card #distance{
+    display: none;
+  }
+}
+
+
+#regDiv2, #regDiv3
+{
+  display: none;
+}
+
+#registerBtn
+{
+  display:none;
+}

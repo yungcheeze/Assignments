@@ -1,0 +1,15 @@
+ #page-content-wrapper{
+    /* prevent overlap with navbar */
+    padding-top: 200px;
+}
+/*
+ #navbar div.container-fluid{
+     height:100px;
+ }
+
+ #navbar .navbar-header .navbar-nav {
+     margin-top: auto;
+     margin-bottom: auto;
+ }
+
+*/

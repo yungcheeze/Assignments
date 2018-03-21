@@ -1,0 +1,12 @@
+.notification-prototype, .keyword-prototype {
+  display: none;
+}
+
+#watchlist {
+  padding-top: 20px;
+}
+
+.list-group-item .delete-icon {
+  position: absolute;
+  right: 5px;
+}

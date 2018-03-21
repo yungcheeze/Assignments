@@ -1,0 +1,32 @@
+
+
+#allthreads .card
+{
+    cursor:pointer;
+}
+
+.card .thread-img {
+  float: left;
+}
+
+.thread-img img {
+  border-radius: 5px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.thread-prototype {
+  display: none;
+}
+
+.card a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar {
+  font-size: 3em;
+}

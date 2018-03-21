@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Car model</title>
+    <style>
+div{
+  float: right;
+  padding-right: 100px;
+}
+    </style>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="600" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <div>
+    <h4>HOTKEYS</h4>
+    <ul>
+      <li>w: move forward</li>
+      <li>s: move backward</li>
+      <li>a: turn left</li>
+      <li>d: turn right</li>
+      <li>q: open doors</li>
+      <li>e: close doors</li>
+    </ul>
+    </div>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="movements.js"></script>
+    <script src="carModel.js"></script>
+  </body>
+</html>

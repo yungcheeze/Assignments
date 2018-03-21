@@ -1,0 +1,53 @@
+.in-prototype{
+  display: none;
+}
+
+.out-prototype{
+  display: none;
+}
+.message-card {
+  border-radius: 15px;
+}
+
+.message-card .time-stamp {
+  border-top: none;
+}
+
+.message-in {
+  border-bottom-left-radius: 2px;
+  margin-right: 20px;
+}
+
+.message-out {
+  border-bottom-right-radius: 2px;
+  margin-left: 20px;
+}
+
+.message-out .time-stamp {
+  text-align: right;
+}
+
+.threadinfo img{
+  border-radius: 50%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+textarea.custom-textarea {
+  height: 40px;
+  min-height: 40px;
+  max-height: 50px;
+  padding: 0px;
+}
+
+.custom-btn {
+  border-radius: 2px !important;
+}
+
+.custom-input-group {
+  border-spacing: 10px;
+}
+
+.avatar {
+  font-size: 3em;
+}

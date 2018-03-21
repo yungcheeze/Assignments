@@ -1,0 +1,66 @@
+TODO:
+1. Read only requests shouldn't be forwarded to replicas
+Written Questions
+
+
+[ 1 ]
+
+a)Describe the generic workflow of a passive replication based distributed system? 
+ 
+1. Request: The front end issues the request, containing a unique identifier,
+ to the primary replica manager.
+
+2. Coordination: The primary takes each request atomically, in the order in
+ which it receives it. It checks the unique identifier, in case it has already
+ executed the request, and if so it simply resends the response.
+
+3. Execution: The primary executes the request and stores the response.
+
+4. Agreement: If the request is an update, then the primary sends the updated
+ state, the response and the unique identifier to all the backups. The backups
+ send an acknowledgement.
+
+5. Response: The primary responds to the front end, which hands the response
+ back to the client.
+
+b)Explain how passive replication ensures information availability. 
+ 
+It has a fault tolrance of f-1 replica crashes. i.e. if a DS has f replicas,
+when the the primary crashes, any of the remaining f-1 backups can take its
+place, since they contain the same information
+
+[ 3 ]
+
+a)
+Suppose the primary server may fail sometimes. Explain what procedures should
+be introduced to the distributed system in order to resolve this failure
+situation. In addition, if the failed primary server recovers, describe what
+should be done to allow this server to run as part of the distributed system
+again.
+
+When the primary server fails, a backup should be arbitrarily chosen to replace
+it (i.e. all subseqent frontend will be sent to this newly promoted backup).
+This can be done centrally by the frontend, which will attempt to
+promote a backup when the current primary replica crashes.
+
+An alternative would be for the backups to agree on which specific backup to
+promote via view-synchronous group communication. This is more efficient than
+the first method, but it is also more difficult to implement properly. As such
+I have chosen the first method.
+
+For my particular implementation, the frontend will try to obtain a proxy
+object of the current primary repica from the RMI registry. If it fails, it
+looks up a list of backups from the registry and promotes the first one it
+finds.
+
+When the primary recovers it readmitted into the distributed system
+as a backup under a new proxy uri. However, before readmission, it will consult
+with the one of the other replicas so it matches it is in a valid state
+(i.e. the it has the same entries in the items array and request log)
+
+N.B. 
+Since primary and backups are now intechangeable they will have to be capable
+of performing the same set of functions (i.e. they are the same class). They
+will only be differentiated by their uri alias in the name server
+ (i.e. primary will have the name "gamestore.primary", backups will have the
+name "gamestore.backup.*")
